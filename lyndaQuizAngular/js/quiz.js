@@ -9,6 +9,7 @@
         $scope.activeQuestionAnswered = 0;
         $scope.percentage = 0;
         
+        //TODO: use "resource" instead of $http.get
         $http.get('quiz_data.json').then(function(quizData){
             $scope.myQuestions = quizData.data;
             $scope.totalQuestions = $scope.myQuestions.length;
@@ -49,7 +50,7 @@
         }
         
         $scope.createShareLinks = function(percentage) {
-            var url = 'http://codifydesign.com';
+            var url = 'http://172.28.13.76:803';
             var emailLink = '<a class="btn email" href="mailto:?subject=Try to beat my quiz score!&amp;body=I scored ' + percentage + '%25 on this quiz about Saturn.  Try to beat my score at ' + url + '">Email a friend</a>';
             var twitterLink = '<a class="btn twitter" target="_blank" href="http://twitter.com/share?text=I scored ' + percentage + '%25 on this quiz about Saturn.  Try to beat my score at &amp;hashtags=SaturnQuiz &amp;url=' + url + '">Tweet your score</a>';
             var newMarkup = emailLink + twitterLink;
