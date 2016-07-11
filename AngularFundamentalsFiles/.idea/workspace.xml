@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f343767-9c2e-4d8f-a95d-b61464b0287c" name="Default" comment="adding hello world example">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DemoApp/DemoApp/app/helloWorld.html" />
+    <list default="true" id="5f343767-9c2e-4d8f-a95d-b61464b0287c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AngularFundamentalsFiles.iws" />
@@ -310,16 +309,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1468231060137</updated>
-      <workItem from="1468231061301" duration="2403000" />
+      <workItem from="1468231061301" duration="2474000" />
     </task>
+    <task id="LOCAL-00001" summary="adding hello world example">
+      <created>1468233886943</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1468233886943</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2403000" />
+    <option name="totallyTimeSpent" value="2474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1004" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
