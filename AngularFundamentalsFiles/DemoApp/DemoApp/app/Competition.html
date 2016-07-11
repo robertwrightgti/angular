@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="competitionApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Competition</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+    <script src="https://use.fontawesome.com/412affd2f4.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div ng-controller="CompetitionController">
+        <h1>Who will be the winner..?</h1><h2>winner: {{winner}}</h2>
+        <div class="row">
+            <div ng-repeat="person in people" class="span6">
+                <img ng-src="{{person.imageUrl()}}" width="200px"/>
+                <h1>{{person.name}}</h1>
+                <div class="container">
+                    <div class="row"
+                         ng-repeat="task in person.tasks"
+                         ng-click="toggleTask(task, person)">
+                        <div class="span2">{{task.name}}</div>
+                        <div class="span4"><i ng-class="{'fa fa-check-circle': task.complete}" style="color: green;"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/underscore-1.4.4.min.js"></script>
+<!--<script src="lib/lodash.core.min.js"></script>-->
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="js/competitionApp.js"></script>
+<script src="js/controllers/CompetitionController.js"></script>
+</body>
+</html>
