@@ -7,7 +7,7 @@ competitionApp.controller('CompetitionController',
         $scope.winner = null;
 
         //init
-        vm.init = function () {
+        function init() {
 
             //init each person
             vm.people.forEach(function (person) {
@@ -19,17 +19,25 @@ competitionApp.controller('CompetitionController',
                 person.tasks = _.map(tasks, _.clone);
 
                 person.imageName = "start.jpg";
-                person.imageUrl = function() {
-                    if ($scope.winner != null && $scope.winner != person.name) {
+                person.imageUrl = function (person) {
+                    console.log("checking for " + person.name)
+                    //console.log("winner is " + $scope.winner)
+                    /*if ($scope.winner != null && $scope.winner != person.name) {
                         person.imageName = "loser.jpg";
-                    }
+                    } else {
+                        vm.updateStatus(person);
+                    }*/
                     return person.imagePath + person.imageName;
                 }
+                
             });
 
             //public properties
-            $scope.people = vm.people;
         };
+
+/*        $scope.$watch($scope.winner) {
+            console.log($scope.winner);
+        }*/
 
         //public methods
         $scope.toggleTask = function(task, person) {
@@ -51,7 +59,7 @@ competitionApp.controller('CompetitionController',
                 person.imageName = "smile.jpg";
                 if($scope.winner == person.name) { $scope.winner = null }
             }
-            if (numberOfTasksCompleted == numberOfTasks) {
+            if (numberOfTasksCompleted == numberOfTasks && $scope.winner == null) {
                 person.imageName = "winner.jpg";
                 $scope.winner = person.name;
             }
@@ -92,7 +100,7 @@ competitionApp.controller('CompetitionController',
                 "complete": false,
                 "sortOrder": 4,
                 "gender": "female"
-            },
+            }/*,
             {
                 "name": "Toilet",
                 "complete": false,
@@ -107,9 +115,9 @@ competitionApp.controller('CompetitionController',
                 "name": "Coat",
                 "complete": false,
                 "sortOrder": 7
-            }
+            }*/
         ];
 
-        vm.init();
+        init();
     }
 );

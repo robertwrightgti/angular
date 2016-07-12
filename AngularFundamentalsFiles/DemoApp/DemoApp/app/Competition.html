@@ -10,11 +10,11 @@
 <body>
 
 <div class="container">
-    <div ng-controller="CompetitionController">
+    <div ng-controller="CompetitionController as vm">
         <h1>Who will be the winner..?</h1><h2>winner: {{winner}}</h2>
         <div class="row">
-            <div ng-repeat="person in people" class="span6">
-                <img ng-src="{{person.imageUrl()}}" width="200px"/>
+            <div ng-repeat="person in vm.people track by $index" class="span6">
+                <img ng-src="{{person.imagePath}}{{person.imageName}}" width="200px"/>
                 <h1>{{person.name}}</h1>
                 <div class="container">
                     <div class="row"
