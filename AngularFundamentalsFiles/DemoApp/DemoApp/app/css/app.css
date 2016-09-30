@@ -7,6 +7,14 @@ select, textarea {
   color: #52575c;
 }
 
+.oddRow {
+    background-color: darkred;
+}
+
+.evenRow {
+    background-color: darkslateblue;
+}
+
 .well-title {
   margin-top: 0px;
 }

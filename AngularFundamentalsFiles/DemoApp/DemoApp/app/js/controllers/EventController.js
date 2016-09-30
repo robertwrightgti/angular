@@ -19,7 +19,7 @@ eventsApp.controller('EventController',
                 {
                     name: "Starting stuff",
                     creatorName: "Bob Fleming",
-                    duration: "1hr",
+                    duration: 1,
                     level: "Beginner",
                     abstract: "You know nothing.  You will LISTEN.",
                     upVoteCount: 0
@@ -27,7 +27,7 @@ eventsApp.controller('EventController',
                 {
                     name: "Getting better",
                     creatorName: "Kenny Sansom",
-                    duration: "2hrs",
+                    duration: 2,
                     level: "Intermediate",
                     abstract: "You think you know it - but you don't.",
                     upVoteCount: 0
@@ -35,7 +35,7 @@ eventsApp.controller('EventController',
                 {
                     name: "Rocking that shit",
                     creatorName: "Iain Sharples",
-                    duration: "11hrs",
+                    duration: 4,
                     level: "Advanced",
                     abstract: "I will crush your minds with code.",
                     upVoteCount: 0
@@ -53,6 +53,8 @@ eventsApp.controller('EventController',
             }
         }
 
-        $scope.init();
-    }
+        $scope.createEvent = function() {
+            window.location = "/NewEvent.html";
+        }
+      }
 );
